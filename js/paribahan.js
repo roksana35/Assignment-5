@@ -7,18 +7,17 @@ for (let index = 0; index < seats.length; index++) {
   const seat = seats[index];
   seat.addEventListener("click",function(e){
     count=count+1;
+
     const totalSeat= document.getElementById("total-seat").innerText;
     const totalSeats = parseInt(totalSeat);
     const totalSeatNumber=totalSeats-1;
     setInnerText("counts",count);
     setInnerText("total-seat",totalSeatNumber);
     const seatNumber = e.target.innerText;
-    array.push('seatNumber');
     
-    if(e.target>=5){
-      alert('you can not buy 5 seat');
-      
-    }
+    // array.push('seatNumber');
+
+    
     const addSeatNumber=document.getElementById("addSeat");
     const li=document.createElement('li');
     const p =document.createElement('p');
@@ -45,9 +44,9 @@ for (let index = 0; index < seats.length; index++) {
 
 
 
-  })
+  });
   
-}
+};
 
 function setInnerText(id,value){
   document.getElementById(id).innerText=value;
@@ -74,4 +73,5 @@ couponButton.addEventListener("click",function(){
     alert('invalid coupon');
   }
 
-})
+});
+
