@@ -9,9 +9,12 @@
 }
 li{
     display: flex;
-    gap: 20px;
-    width: 500px;
+    gap: 100px;
     margin: auto;
     text-align: center;
     list-style: numeric;
+}
+#addSeat{
+    display: grid;
+    grid-template-columns: 1fr, 1fr ,1fr;
 }

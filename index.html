@@ -11,7 +11,7 @@
 
 </head>
 <body class=" p-5">
-    <header class="lg:w-[1173px] lg:h-[56px] mx-auto border-2 border-red-400">
+    <header class="lg:w-[1173px] lg:h-[56px] mx-auto ">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
@@ -50,7 +50,7 @@
                   <div class="max-w-md">
                     <h1 class="mb-5 lg:text-5xl font-bold text-white">End-to-End Travel with <br><span class="text-[#1DD100]">P  Paribahan</span></h1>
                     <p class="mb-5 text-yellow-50">P-Poribohon, owned and operated by p-poribohon Limited, is Bangladesh’s largest online ticket destination, which is committed to making your life convenient, easier and smarter.</p>
-                    <button class="btn bg-[#1DD100] border-none lg:w-[100px] ">By Tickets</button>
+                    <button  class="btn bg-[#1DD100] border-none lg:w-[100px]  "><a href="#ticket counter" src="#ticket counter">Buy Tickets</a></button>
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@
             
         </section>
         <!-- ph paribohon section -->
-        <section class="">
+        <section id="ticket counter" >
             <!-- ph title -->
             <div class="flex flex-col mx-auto lg:w-[1173px] lg:h-[650px] lg:mt-16 border-t-2 rounded-xl border-[#1DD100] bg-slate-100">
                 <div class="pt-8">
@@ -121,7 +121,7 @@
                 </div>
                 <!-- card div -->
                 <div class="flex  mx-auto h-[300px] lg:h-[450px] lg:w-[1170px] bg-white mt-7 ">
-                    <div class="flex  border-2 border-purple-600 lg:pt-10 p-2 lg:p-6">
+                    <div class="flex  lg:pt-10 p-2 lg:p-6">
                         <div class="flex flex-col w-[150px] lg:w-[700px] ">
                             <div class="flex justify-between  ">
                                 <div class="flex gap-2 mr-2">
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="flex bg-slate-200 lg:p-2 rounded-lg lg:h-14 ">
                                     <img class=" w-4 h-4 lg:w-7 lg:h-10 pt-4" src="images/seat-green.png" alt="">
-                                    <p id="seats-left" class=" text-xs lg:text-xl pt-3 text-[#1DD100]">40 Seats left</p>
+                                    <p id="seats-left" class=" text-xs lg:text-xl pt-3 text-[#1DD100]"><span id="total-seat">40</span> Seats left</p>
                                 </div>
                             </div>
                             <div class="mt-3">
@@ -157,7 +157,7 @@
         
                     </div>
                     <div><img class="h-[80%] lg:h-full w-full" src="images/info-devider.png" alt=""></div>
-                    <div class="border-2 border-purple-600 lg:w-[300px] w-[120px] ">
+                    <div class=" lg:w-[300px] w-[120px] ">
                         <img class="pt-20 mx-auto" src="images/fare.png" alt="">
                         <h3 class="pt-4 lg:text-3xl font-bold text-center ">550 Taka</h3>
                         <p class="text-center lg:text-xl">Per Seat</p>
@@ -169,7 +169,7 @@
         </section>
         <!-- seat select section -->
         <section>
-            <div class="lg:w-[1170px] lg:h-[600px] flex">
+            <div class="lg:w-[1170px] lg:h-[600px] flex flex-col lg:flex-row">
                     <!-- seat select  -->
             <div class="lg:mt-5 lg:w-[600px] lg:h- mx-auto lg:p-4">
                 <h3 class="lg:text-2xl font-bold mb-2">Select Your Seat</h3>
@@ -248,8 +248,8 @@
             
             </div>
             <!-- seat from  -->
-            <div class=" lg:mt-1  mx-auto lg:p-4 lg:w-[500px]">
-                <div class="bg-slate-100 lg:p-7">
+            <div class=" lg:mt-1  mx-auto p-3 lg:p-4 lg:w-[500px]">
+                <div class="bg-slate-100 p-3 lg:p-7">
                     <h3 class="lg:text-2xl font-bold mb-2">Selected Your Seat</h3>
                 <hr>
                 <div class="flex justify-around mb-3 mt-3">
@@ -262,15 +262,15 @@
 
                 </div>
                 <hr>
-                <div class="flex justify-between font-semibold">
+                <div class="flex p-3 justify-between font-semibold">
                     <h4>Total Price</h4>
                     <h4>BDT <span id="totalPrice">0</span></h4>
                 </div>
                 <div class="flex p-8">
                     <input id="input-field" class="bg-white disabled p-4 rounded-lg w-[370px]  relative " type="text" placeholder="Have any coupon?">
-                    <button class="btn bg-[#1DD100] text-white  absolute mt-1 lg:ml-[280px]">Apply</button>
+                    <button id="coupon-btn" class="btn bg-[#1DD100] text-white  absolute mt-1 ml-[280px]">Apply</button>
                 </div>
-                <div class="flex justify-between font-semibold">
+                <div class="flex justify-between p-3 font-semibold">
                     <h4>Grand Total</h4>
                     <h4>BDT <span id="grend-total">0</span></h4>
                 </div>
@@ -278,11 +278,28 @@
                 <div class="">
                     <h3 class="text-xl font-bold ml-3 lg:mt-6">Passenger Name*</h3>
                     <input class="lg:w-[450px]  p-4" type="text"placeholder="Enter your name">
-                    <h3 class="text-xl font-bold ml-3 lg:mt-6">Phone Number*</h3>
-                    <input class="lg:w-[450px] p-4" type="number" name="number" id="" placeholder="Enter your phone number">
+                    <h3 id="phoneNumber" class="text-xl font-bold ml-3 lg:mt-6">Phone Number*</h3>
+                    <input class="lg:w-[450px] p-4" type="number" name="number" id="Number" placeholder="Enter your phone number">
                      <h3 class="text-xl font-bold ml-3 lg:mt-6">Email ID</h3>
                     <input class="lg:w-[450px] p-4" type="email" name="email" id="" placeholder="Enter your email id">
-                    <button class="btn btn-block bg-[#1DD100]">Next</button>
+                    <!-- Open the modal using ID.showModal() method -->
+<!-- Open the modal using ID.showModal() method -->
+<button id="next-btn" class="btn w-full bg-[#1DD100] text-white " onclick="my_modal_1.showModal()">Next</button>
+<dialog id="my_modal_1" class="modal w-[800px] h-[500px] mx-auto ">
+  <div class="modal-box">
+    <img class="w-[80px] mx-auto" src="images/success.png" alt="">
+    <h3 class="text-green-700 font-semibold text-center mt-2">SUCCESS</h3>
+    <h4 class="text-black font-medium text-center">Than you for Booking Our Bus Seat.</h4>
+    <h4 class="text-black font-medium text-center">We are working hard to find the best service and deals for you. </h4>
+    <p class="text-center">Shortly you will find a conformation in your email.</p>
+    <div class="modal-action">
+      <form class="pr-[200px]"  method="dialog ">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-green-600 text-white">Continue</button>
+      </form>
+    </div>
+  </div>
+</dialog>
                 </div>
 
             </div>
@@ -290,6 +307,8 @@
             </div>
             
         </section>
+        <!-- ticket parches -->
+        
     </main>
 
 
